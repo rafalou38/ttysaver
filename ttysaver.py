@@ -1,6 +1,9 @@
+#!/usr/bin/env python3
+
 from threading import Timer
 
 DELAY = 30
+KBD_EVENT_FILE = "/dev/input/event3"
 idle = False
 
 
@@ -18,7 +21,7 @@ def go_idle():
     set_brightness(0)
 
 
-with open( "/dev/input/event3", "rb" ) as f:
+with open(KBD_EVENT_FILE, "rb") as f:
 
     # Init timer
     t = Timer(DELAY, go_idle)
