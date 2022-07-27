@@ -1,4 +1,3 @@
-import struct 
 from threading import Timer
 
 DELAY = 30
